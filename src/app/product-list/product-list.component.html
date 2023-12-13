@@ -1,0 +1,22 @@
+<h2>Liste des produits</h2>
+<div *ngFor="let Prodval of Prodlist1">
+  <h3>
+    {{ Prodval.name }}
+  </h3>
+  <!--<h3>
+    {{ Prodval.description }}
+  </h3> -->
+  <h3>{{ Prodval.price }} {{ Prodval.devise }}</h3>
+
+  <p *ngIf="Prodval.description">Description: {{ Prodval.description }}</p>
+
+  <button type="button" (click)="share()">Partager</button>
+
+  <app-product-alerts [product]="Prodval"> </app-product-alerts>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
